@@ -1,5 +1,4 @@
-import React, { Fragment } from "react";
-
+import React from 'react'
 interface DialogProps {
   /**
    * Is this the principal call to action on the page?
@@ -25,7 +24,7 @@ interface DialogProps {
 
 const Dialog: React.FC<DialogProps> = () => {
   return (
-    <Fragment>
+    <>
       <div className="z-dialog-mask"></div>
       <div className="z-dialog">
         <header>alert</header>
@@ -35,7 +34,7 @@ const Dialog: React.FC<DialogProps> = () => {
           <button>cancel</button>
         </footer>
       </div>
-    </Fragment>
+    </>
   );
 };
 

@@ -1,8 +1,8 @@
-interface InputProps {
-  value: string,
-  onChange: (value: string) => void
+import { InputHTMLAttributes } from "react"
+import './index.css'
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 const Input: React.FunctionComponent<InputProps> = (props) => {
-  return <input type="text" value={props.value}/>
+  return <input className={`ele-input`} {...props}/>
 }
 export default Input

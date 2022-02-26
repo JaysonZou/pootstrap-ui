@@ -8,10 +8,9 @@ export default {
 };
 
 export const Primary = () => {
-  const [ data, setData] = useState('asfe')
-
-  const handleChange = () => {}
-
-  return <Input value={data} onChange={handleChange} />
-
+  return <Input />
 };
+
+export const Addon = () => {
+  return <Input />
+}
