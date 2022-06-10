@@ -1,41 +1,34 @@
-import React from 'react'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.scss";
 interface DialogProps {
   /**
-   * Is this the principal call to action on the page?
+   * If show dialog
    */
-  primary?: boolean;
-  /**
-   * What background color to use
-   */
-  backgroundColor?: string;
+  visible: boolean;
   /**
    * How large should the button be?
    */
   size?: "small" | "medium" | "large";
-  /**
-   * Button contents
-   */
-  label: string;
-  /**
-   * Optional click handler
-   */
-  onClick?: () => void;
+  onOk: () => void;
+  onCancel: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = () => {
-  return (
+const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel }) => {
+  const dialog = visible ? (
     <>
-      <div className="z-dialog-mask"></div>
+      <div className={"z-dialog-mask"}></div>
       <div className="z-dialog">
         <header>alert</header>
-        <main>this is message</main>
-        <footer>
-          <button>ok</button>
-          <button>cancel</button>
+        <main className="z-dialog-main">this is message messagemessage</main>
+        <footer className="z-dialog-footer">
+          <button onClick={onOk}>ok</button>
+          <button onClick={onCancel}>cancel</button>
         </footer>
       </div>
     </>
-  );
+  ) : null;
+  return ReactDOM.createPortal(dialog, document.body);
 };
 
-export default Dialog
+export default Dialog;
