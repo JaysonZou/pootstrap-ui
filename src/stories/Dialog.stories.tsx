@@ -7,22 +7,15 @@ import Dialog from "../lib/dialog";
 export default {
   title: "Example/Dialog",
   component: Dialog,
-  actions: { argTypesRegex: "^on.*" },
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    // visible: true,
-    onOk: { action: "clicked" },
-  },
-  args: {
-    visible: true,
-    onOk: () => {
-      console.log("ok");
-    },
-    onCancel: () => {
-      console.log("cancel");
-    },
-  },
 } as ComponentMeta<typeof Dialog>;
 
 const Template: ComponentStory<typeof Dialog> = (args) => <Dialog {...args} />;
-export const Primary = Template.bind({});
+export const CustomFooter = Template.bind({});
+CustomFooter.args = {
+  visible: true,
+  footer: (
+    <>
+      <div>hello</div>
+    </>
+  ),
+};

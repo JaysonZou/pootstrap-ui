@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 interface DialogProps {
@@ -6,15 +6,12 @@ interface DialogProps {
    * If show dialog
    */
   visible: boolean;
-  /**
-   * How large should the button be?
-   */
-  size?: "small" | "medium" | "large";
+  footer: ReactNode;
   onOk: () => void;
   onCancel: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel }) => {
+const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel, footer }) => {
   const dialog = visible ? (
     <>
       <div className={"z-dialog-mask"}></div>
@@ -22,8 +19,14 @@ const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel }) => {
         <header>alert</header>
         <main className="z-dialog-main">this is message messagemessage</main>
         <footer className="z-dialog-footer">
-          <button onClick={onOk}>ok</button>
-          <button onClick={onCancel}>cancel</button>
+          {footer ? (
+            footer
+          ) : (
+            <>
+              <button onClick={onOk}>ok</button>
+              <button onClick={onCancel}>cancel</button>
+            </>
+          )}
         </footer>
       </div>
     </>
