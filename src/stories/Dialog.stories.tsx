@@ -5,7 +5,7 @@ import Dialog from "../lib/dialog";
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Example/Dialog",
+  title: "Dialog",
   component: Dialog,
 } as ComponentMeta<typeof Dialog>;
 
