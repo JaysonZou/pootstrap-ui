@@ -7,7 +7,8 @@
     "serve": "vite preview",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "dev:css": "tailwindcss -o ./src/styles/tailwind.css --watch"
+    "dev:css": "tailwindcss -o ./src/styles/tailwind.css --watch",
+    "test": "cypress run --component"
   },
   "dependencies": {
     "react": "^17.0.0",
@@ -26,6 +27,7 @@
     "@vitejs/plugin-react": "^1.0.0",
     "babel-loader": "^8.2.3",
     "css-loader": "5.2.7",
+    "cypress": "^12.7.0",
     "jest": "^28.1.1",
     "sass": "^1.49.9",
     "sass-loader": "10.1.1",

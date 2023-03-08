@@ -11,7 +11,12 @@ interface DialogProps {
   onCancel: () => void;
 }
 
-const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel, footer }) => {
+export const Dialog: React.FC<DialogProps> = ({
+  visible,
+  onOk,
+  onCancel,
+  footer,
+}) => {
   const dialog = visible ? (
     <>
       <div className={"z-dialog-mask"}></div>
@@ -33,5 +38,3 @@ const Dialog: React.FC<DialogProps> = ({ visible, onOk, onCancel, footer }) => {
   ) : null;
   return ReactDOM.createPortal(dialog, document.body);
 };
-
-export default Dialog;
