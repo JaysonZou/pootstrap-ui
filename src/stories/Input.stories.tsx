@@ -1,4 +1,4 @@
-import Input from "../lib/input";
+import Input from "../components/input";
 
 import React, { FormEvent, useState } from "react";
 

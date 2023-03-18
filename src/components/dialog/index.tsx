@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import ReactDOM from "react-dom";
-import "./index.scss";
 interface DialogProps {
   /**
    * If show dialog

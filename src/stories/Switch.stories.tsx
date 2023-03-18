@@ -1,4 +1,4 @@
-import { Switch } from "../lib/switch";
+import { Switch } from "../components/switch";
 
 // Button.stories.js|ts|jsx|tsx
 

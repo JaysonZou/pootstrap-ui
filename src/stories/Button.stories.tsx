@@ -1,4 +1,4 @@
-import { Button } from "../lib/button/Button";
+import { Button } from "../components/button/Button";
 
 import React, { useState } from "react";
 

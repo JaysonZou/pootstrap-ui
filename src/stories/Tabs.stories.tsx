@@ -1,4 +1,4 @@
-import { Tabs } from "../lib/Tabs";
+import { Tabs } from "../components/Tabs";
 
 // Button.stories.js|ts|jsx|tsx
 

@@ -1,5 +1,3 @@
-import "./index.scss";
-
 export const Switch = () => {
   return (
     <label className="switch">

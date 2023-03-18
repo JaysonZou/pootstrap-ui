@@ -1,5 +1,4 @@
 import { ReactNode, useState } from "react";
-import "./index.scss";
 
 interface TabItem {
   title: string;

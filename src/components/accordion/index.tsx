@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../styles/tailwind.css";
+import "../../index.css";
 
 export interface AccordionProps {
   data: AccordionItem[];
